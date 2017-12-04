@@ -1,0 +1,30 @@
+h1 {COLOR: Black; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: .9em; LINE-HEIGHT: 15px;}
+
+p {COLOR: Black; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: .7em; LINE-HEIGHT: 15px;}
+
+ul {COLOR: Black; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: .7em; LINE-HEIGHT: 15px;}
+
+.standard {COLOR: Black; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: .7em; FONT-WEIGHT: bold }
+
+.footer {FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: .6em; FONT-STYLE: normal; line-height: normal; FONT-WEIGHT: normal; FONT-VARIANT: normal; COLOR: #333333}
+
+.reg {COLOR: Black; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: .7em; LINE-HEIGHT: 15px;}
+
+.input {color: #000000 ;font-weight: normal; font-size: .6em; }
+
+.emph {FONT-SIZE: .8em; COLOR: Black; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-WEIGHT: bold;}
+
+a.mainlink:link { text-decoration: none; color: #0000CC; font-family: Verdana, Arial, sans-serif; font-size: .7em; font-weight: normal; }
+a.mainlink:visited { text-decoration: none; color: #0000CC; font-family: Verdana, Arial, sans-serif; font-size: .7em; font-weight: normal; }
+a.mainlink:hover { text-decoration: underline; color: #000000; font-family: Verdana, Arial, sans-serif; font-size: .7em; font-weight: normal; }
+
+a.mainlink2:link { text-decoration: none; color: #0000CC; font-family: Verdana, Arial, sans-serif; font-size: .8em; font-weight: bold; }
+a.mainlink2:visited { text-decoration: none; color: #0000CC; font-family: Verdana, Arial, sans-serif; font-size: .8em; font-weight: bold; }
+a.mainlink2:hover { text-decoration: underline; color: #000000; font-family: Verdana, Arial, sans-serif; font-size: .8em; font-weight: bold; }
+
+.admin {COLOR: Black; FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif; FONT-SIZE: .9em; FONT-WEIGHT: bold; word-spacing: 1mm }
+
+.copy {COLOR: #000049; FONT-FAMILY: Verdana, Geneva, Arial, sans-serif; FONT-SIZE: .6em; margin-left: 2%}
+.new {COLOR: Black; FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif; FONT-SIZE: .65em;
+FONT-WEIGHT: bold }
+

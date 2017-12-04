@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<project name="ceo" default="webapp" basedir=".">
+  <property name="appName" value="ceo"/>
+  <!-- local must be first to override SVN defaults with local modifications -->
+  <property file="${user.home}/build.properties"/>
+  <property file="${basedir}/build.properties"/>
+  <property name="src"  value="${basedir}/src"/>
+  <property name="tmp"  value="${basedir}/tmp"/>
+  <property name="dist" value="${basedir}/dist"/>
+
+  <patternset id="txtfiles">
+    <include name="**/*.css"/>
+    <include name="**/*.html"/>
+    <include name="**/*.js"/>
+  </patternset>
+  <patternset id="binfiles">
+    <exclude name="**/*.css"/>
+    <exclude name="**/*.html"/>
+    <exclude name="**/*.js"/>
+  </patternset>
+
+  <target name="clean" description="Remove temp dir">
+    <delete dir="${dist}"/>
+    <delete dir="${tmp}"/>
+  </target>
+
+  <target name="local-deploy" description="Copy files to webserver dir">
+    <mkdir dir="${tmp}"/>
+    <copy todir="${tmp}">
+      <fileset dir="${src}">
+        <patternset refid="txtfiles"/>
+      </fileset>
+    </copy>
+    <copy todir="${tmp}">
+      <fileset dir="${src}">
+        <patternset refid="binfiles"/>
+      </fileset>
+    </copy>
+    <sync todir="${local.htdocs.dir}/${appName}">
+      <fileset dir="${tmp}"/>
+    </sync>
+  </target>
+  <target name="dist-deploy" description="Create zipfile for remote deployment">
+    <!-- deploy to tmp dir -->
+    <mkdir dir="${dist}"/>
+    <antcall target="local-deploy">
+      <param name="local.htdocs.dir" value="${dist}"/>
+    </antcall>
+  </target>
+
+  <target name="webapp" depends="dist-deploy"
+      description="Create bundled zipfile for remote deployment">
+    <!-- create one big zipfile -->
+    <zip destfile="${dist}/ceo.zip" basedir="${dist}" includes="ceo/**"/>
+  </target>
+</project>

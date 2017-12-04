@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Document Viewer</title>
+<STYLE TYPE="text/css">
+P {color: #000000; font-size: 8pt; font-family: Arial,helvetica,sans-serif}
+H1 {color: #FFFFFF; font-size: 18pt; font-family: Arial, helvetica, sans-serif}
+</STYLE>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+function checkit(form) {
+  if (form.CISOSEARCH.value == "")
+    alert('Please enter a search word.');
+  else
+    form.submit();
+}
+
+function changeColor(num) {
+  var n = 1;
+  for (n = 1; n < 3; n=n+1) {
+    if (n == num)
+      eval('item' + n + '.style.color="#000000"');
+    else
+      eval('item' + n + '.style.color="#0000FF"');
+  }
+  return true;
+}
+-->
+</SCRIPT>
+</head>
+
+<body background="/ceo/images/background.jpg">
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+
+<td bgcolor="#FFFFFF">
+<p>
+&nbsp;&nbsp;<b>Select a title below:</b><br><br>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td width="22" align="right"><p>1.&nbsp;</p></td><td><p><A NAME="item1" HREF="/cgi-bin/htmldocview.exe?CISOFILE=/ceo-sioadocs/image/85.jpg&CISODESC=/cgi-bin/htmldesc.exe%3FCISOROOT=/ceo-sioadocs%26CISOPTR=84&CISOSEARCH=&CISOFTS=0" onClick="changeColor(1)" STYLE="text-decoration: none;" target="view">
+Page 1</A></p></td></tr>
+<tr><td width="22" align="right"><p>2.&nbsp;</p></td><td><p><A NAME="item2" HREF="/cgi-bin/htmldocview.exe?CISOFILE=/ceo-sioadocs/image/86.jpg&CISODESC=/cgi-bin/htmldesc.exe%3FCISOROOT=/ceo-sioadocs%26CISOPTR=85&CISOSEARCH=&CISOFTS=0" onClick="changeColor(2)" STYLE="text-decoration: none;" target="view">
+Page 2</A></p></td></tr>
+</table>
+<br>
+</p>
+</td>
+
+</tr>
+</table>
+<p>
+<a href="/cgi-bin/htmldesc.exe?CISOROOT=/ceo-sioadocs&CISOPTR=86&CISOMODE=0" onClick="changeColor(0)" target="view">Show document description</a><br>
+</p>
+
+<SCRIPT LANGUAGE="Javascript">
+<!--
+changeColor(1);
+parent.parent.view.document.location.replace("/cgi-bin/htmldocview.exe?CISOFILE=/ceo-sioadocs/image/85.jpg&CISODESC=/cgi-bin/htmldesc.exe%3FCISOROOT=/ceo-sioadocs%26CISOPTR=84&CISOFTS=0");
+-->
+</SCRIPT>
+
+</body>
+</html>
